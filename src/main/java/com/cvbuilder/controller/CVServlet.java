@@ -22,11 +22,11 @@ public class CVServlet extends HttpServlet {
             CVBean sampleBean = new CVBean();
 
             // Pre-populate realistic sample candidate details
-            sampleBean.setFullName("Ahmad Danial bin Zulkifli");
+            sampleBean.setFullName("Siti Khadijah Halim");
             sampleBean.setProfessionalTitle("Junior Java & Enterprise Software Engineer");
-            sampleBean.setEmail("ahmad.danial@example.my");
+            sampleBean.setEmail("siti.khadijah@gmail.my");
             sampleBean.setPhoneNumber("+60 12-345 6789");
-            sampleBean.setProfileUrl("https://github.com/ahmaddanial-dev");
+            sampleBean.setProfileUrl("https://github.com/sitikhadijah-dev");
             sampleBean.setProfileSummary(
                 "Detail-oriented Computer Science graduate with hands-on experience in Java EE, "
                 + "Servlet/JSP MVC web applications, and relational database systems. Proven ability "
@@ -35,12 +35,12 @@ public class CVServlet extends HttpServlet {
 
             // Education
             sampleBean.setHighestDegree("Bachelor of Computer Science (Hons.)");
-            sampleBean.setInstitutionName("Universiti Teknologi MARA (UiTM)");
+            sampleBean.setInstitutionName("Universiti Teknologi Malaysia (UTM)");
             sampleBean.setGraduationYear("2026");
             sampleBean.setMajorField("Software Engineering & Enterprise Systems");
 
             // Experience
-            sampleBean.setRecentJobTitle("IT & Systems Support Intern");
+            sampleBean.setRecentJobTitle("IT & Systems Analyst Intern");
             sampleBean.setCompanyName("Setia Utama Technology Sdn Bhd");
             sampleBean.setDuration("Sept 2025 – Feb 2026");
             sampleBean.setResponsibilities(
@@ -95,8 +95,8 @@ public class CVServlet extends HttpServlet {
             RequestDispatcher dispatcher = request.getRequestDispatcher("cvView.jsp");
             dispatcher.forward(request, response);
         } else {
-            request.setAttribute("errorList", cvBean.getValidationErrors());
-            request.setAttribute("submittedData", cvBean);
+            String errorMsg = String.join("<br>• ", cvBean.getValidationErrors());
+            request.setAttribute("errorMessage", "• " + errorMsg);
             RequestDispatcher dispatcher = request.getRequestDispatcher("cvError.jsp");
             dispatcher.forward(request, response);
         }

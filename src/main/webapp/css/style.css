@@ -1,0 +1,272 @@
+/* Base & Form Layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    line-height: 1.6;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.page-header h1 {
+    color: #1e3a8a;
+    font-size: 1.75rem;
+}
+
+/* Form Elements */
+fieldset {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 22px;
+}
+
+legend {
+    font-weight: 700;
+    color: #1e3a8a;
+    padding: 0 8px;
+    font-size: 1.05rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #374151;
+}
+
+.required {
+    color: #dc2626;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #0d9488;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #0f766e;
+}
+
+.btn-outline {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.btn-outline:hover {
+    background-color: #cbd5e1;
+}
+
+/* CV Output Template */
+.cv-sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 45px 50px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cv-header {
+    border-bottom: 3px solid #1e3a8a;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+}
+
+.cv-name {
+    font-size: 2.1rem;
+    color: #0f172a;
+    letter-spacing: 0.5px;
+}
+
+.cv-title {
+    font-size: 1.15rem;
+    color: #1e3a8a;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.cv-contact {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #475569;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.cv-section {
+    margin-bottom: 22px;
+}
+
+.cv-section h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1e3a8a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.cv-item-sub {
+    font-style: italic;
+    color: #475569;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.skill-badge {
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    border: 1px solid #bfdbfe;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Error Box */
+.error-box {
+    background-color: #fef2f2;
+    border-left: 4px solid #dc2626;
+    padding: 18px 22px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.error-box h2 {
+    color: #991b1b;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.error-box ul {
+    margin-left: 20px;
+    color: #7f1d1d;
+}
+
+.action-bar {
+    max-width: 820px;
+    margin: 0 auto 16px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Print-Friendly Rules */
+@media print {
+    body {
+        background: #ffffff;
+        padding: 0;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .cv-sheet {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+    }
+}
